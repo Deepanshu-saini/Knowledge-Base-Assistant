@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from knowledge_assistant.views import DocumentViewSet
+from knowledge_assistant.views import DocumentViewSet, AskQuestionView
 
 router = routers.DefaultRouter()
 router.register(r'documents', DocumentViewSet, basename='document')
@@ -25,4 +25,5 @@ router.register(r'documents', DocumentViewSet, basename='document')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/ask-question/', AskQuestionView.as_view(), name='ask-question'),
 ]
