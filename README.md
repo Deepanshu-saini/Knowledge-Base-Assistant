@@ -17,7 +17,7 @@ A Django-based backend system that powers a Knowledge Assistant API using Retrie
 
 ### 1. Clone the Repository
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/Deepanshu-saini/Knowledge-Base-Assistant.git
 cd LLM-Powered-Knowledge-Assistant-API
 ```
 
@@ -75,22 +75,6 @@ curl -X POST http://localhost:8000/api/ask-question/ \
   "sources": ["Science Class IX - Page 3"]
 }
 ```
-
----
-
-## Notes
-- The first request may take longer as models are loaded into memory.
-- Models are downloaded to your HuggingFace cache on first use.
-- If you see OpenMP warnings, you can suppress them by setting `KMP_DUPLICATE_LIB_OK=TRUE`.
-
----
-
-## Troubleshooting
-- **No answer or slow response:** Wait for model loading, check server logs for errors.
-- **No chunks after upload:** Ensure the document is a valid PDF/Markdown/Text and check the Django admin for chunk creation.
-- **PyTorch not found:** Make sure `torch` is installed (`pip install torch`).
-
----
 
 ## License
 MIT 
