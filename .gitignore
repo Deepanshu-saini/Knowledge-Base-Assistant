@@ -1,0 +1,14 @@
+venv
+*.class
+target/
+out/
+build/
+*.log
+.idea/
+*.iml
+.vscode/
+*.classpath
+*.project
+*.settings/
+.DS_Store
+Thumbs.db
